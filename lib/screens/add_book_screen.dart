@@ -67,6 +67,9 @@ class _AddBookScreenState extends State<AddBookScreen> {
     }
   }
 
+
+//3,
+
   Future<void> _addBook() async {
     // Validate required fields
     if (_titleController.text.isEmpty) {
@@ -90,6 +93,9 @@ class _AddBookScreenState extends State<AddBookScreen> {
       return;
     }
 
+//2,
+
+
     setState(() => _isLoading = true);
 
     try {
@@ -106,7 +112,8 @@ class _AddBookScreenState extends State<AddBookScreen> {
         'userId': FirebaseAuth.instance.currentUser?.uid,
       };
 
-      // Save to Firestore
+
+     // Save to Firestore
       await FirebaseFirestore.instance.collection('books').add(bookData);
 
       if (mounted) {
@@ -162,6 +169,9 @@ class _AddBookScreenState extends State<AddBookScreen> {
         child: Column(
           children: [
             // Image Picker Section
+            
+            
+            //1,
             GestureDetector(
               onTap: _pickImage,
               child: Container(
@@ -175,6 +185,8 @@ class _AddBookScreenState extends State<AddBookScreen> {
                         ? Colors.red.withOpacity(0.5) 
                         : Colors.white.withOpacity(0.1),
                   ),
+
+
                   image: _selectedImage != null
                       ? DecorationImage(image: FileImage(_selectedImage!), fit: BoxFit.cover)
                       : null,
