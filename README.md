@@ -76,7 +76,9 @@ The app is built using **Flutter** framework with **Firebase** providing backend
 5. **My Books** - Manage your own listings
 
 ---
+Watch our complete Book Bazaar presentation here:
 
+[📺 Click to watch on Loom](https://www.loom.com/share/0718a92e02fb4d05a93ae113c7de549d)
 ## 🚀 How to Run the Project
 
 ### Prerequisites
